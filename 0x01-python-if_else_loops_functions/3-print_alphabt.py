@@ -2,4 +2,4 @@
 for i in range(ord('a'), ord('z') + 1):
     char = chr(i)
     if char not in ['q', 'e']:
-        print(f'{char}', end='')
+        print('{}'.format(char), end='')
