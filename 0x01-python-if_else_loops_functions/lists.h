@@ -11,7 +11,8 @@
  * Description: singly linked list node structure
  *
  */
-def islower(c);
+def islower(c):
+def uppercase(str):
 typedef struct listint_s
 {
     int n;
