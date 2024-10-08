@@ -13,6 +13,7 @@
  */
 def islower(c):
 def uppercase(str):
+def print_last_digit(number):
 typedef struct listint_s
 {
     int n;
