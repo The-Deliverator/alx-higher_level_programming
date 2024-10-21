@@ -6,8 +6,11 @@ if __name__ == "__main__":
     if num_args == 0:
         print("Number of argument(s):.")
     else:
-        arg_word = "argument" if num_args == 1 else "arguments"
-        print("Number of argument(s):{}".format(arg_word))
+        if num_args == 1:
+            print("Number of argument(s):argument")
+
+        else:
+            print("Number of argument(s):arguments")
 
         for i in range(1, num_args + 1):
-            print("{}: {}".format(i, sys.argv[i]))
+            print(str(i) + ": " + sys.argv[i])
