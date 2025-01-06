@@ -5,27 +5,13 @@ from model_state import Base, State
 import sys
 
 if __name__ == "__main__":
-
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
-
-    connection_string = (
-        'mysql+mysqldb://{}:{}@localhost/{}'.format(
-            mysql_username, mysql_password, database_name
-        )
+    engine = create_engine(
+        'mysql+mysqldb://{}:{}@localhost/{}'
+        .format(sys.argv[1], sys.argv[2], sys.argv[3])
     )
-    engine = create_engine(connection_string, pool_pre_ping=True)
-
     Base.metadata.create_all(engine)
-
     Session = sessionmaker(bind=engine)
-
     session = Session()
 
-    states = session.query(State).filter(State.name.like('%a%'))
-
-    for state in states:
-        print(f"({state.id}) {state.name}")
-
-    session.close()
+    for state in session.query(State).filter(State.name.like('%a%')):
+        print(state.id, state.name, sep=": ")
