@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Get MySQL credentials from arguments
+Query the first state object sorted by states.id
+display the result then close session
+"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
