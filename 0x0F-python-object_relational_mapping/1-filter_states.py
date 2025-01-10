@@ -2,7 +2,7 @@
 """
 Get MySQL credentials and database name from arguments
 Connect to MySQL server on localhost at port 3306
-Create a cursor to execute sql queries
+Create a cursor to execute sql all queries
 SQL query to select states with names starting with 'N' order by states.id
 Fetch all the results
 Display the results
