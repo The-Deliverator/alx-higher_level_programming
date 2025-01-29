@@ -26,6 +26,3 @@ try:
     print(type(my_fake))
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
-
-guillaume@ubuntu:~/0x0B$ cat my_list.json ; echo ""
-[1, 2, 3]
