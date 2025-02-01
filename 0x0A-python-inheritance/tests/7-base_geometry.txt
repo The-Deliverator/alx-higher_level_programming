@@ -1,0 +1,37 @@
+Doc Test for 7-base_geometry.py
+================================
+
+>>> BG = __import__("7-base_geometry").BaseGeometry()
+
+
+Checking for module docstring:
+>>> m = __import__("7-base_geometry").__doc__
+>>> len(m) > 1
+True
+
+
+>>> BG.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+
+
+>>> BG.integer_validator("my_value", 5)
+
+
+>>> BG.integer_validator("my_value", "5")
+Traceback (most recent call last):
+    ...
+TypeError: my_value must be an integer
+
+
+>>> BG.integer_validator("my_value", 0)
+Traceback (most recent call last):
+    ...
+ValueError: my_value must be greater than 0
+
+
+>>> BG.integer_validator("my_value", -3)
+Traceback (most recent call last):
+    ...
+ValueError: my_value must be greater than 0

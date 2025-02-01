@@ -1,0 +1,52 @@
+Doctest for 1-my_list.py
+========================
+
+Test case 0:
+>>> MyList = __import__('1-my_list').MyList
+>>>
+===========================================
+
+Test Case 1:
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>>
+=========================================
+
+Test Case 3:
+>>> ptm = [23, 4, 95]
+>>> my_list = MyList(ptm)
+>>> my_list.print_sorted()
+[4, 23, 95]
+>>>
+==========================================
+
+Tesr Case 4:
+>>> ab = []
+>>> my_list = MyList(ab)
+>>> my_list.print_sorted()
+[]
+>>>
+==========================================
+
+Test Case 5:
+>>> issubclass(MyList, list)
+True
+>>>
+=========================================
+
+Test Case 6:
+>>> len_list =  __import__("1-my_list").MyList.print_sorted.__doc__
+>>> len(len_list) > 1
+True
+>>>
+=======================================================================
